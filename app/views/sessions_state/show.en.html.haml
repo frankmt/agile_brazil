@@ -1,12 +1,12 @@
-- title "Withdraw from Agile Brazil 2010"
+- title "Confirmation of attendance at Agile Brazil 2010"
 .auto_focus
 
 %p Dear #{current_user.full_name},
 
-%p Your proposal "#{@session.title}" has been selected to be part of the program of the Brazilian Conference about Agile Methods – Agile Brazil 2010, but you decided to withdraw your attendance. To confirm your withdrawal, please read and sign the following term of agreement:
+%p We are pleased to inform you that your proposal "#{@session.title}" has been selected to be part of the program of the Brazilian Conference about Agile Methods – Agile Brazil 2010! To confirm your attendance at the event, please read and sign the following term of agreement:
 
 - content_for :agreement do
-  %h3 AUTHOR WITHDRAW TERM OF AGREEMENT - AGILE BRAZIL 2010
+  %h3 AUTHOR TERM OF AGREEMENT - AGILE BRAZIL 2010
   On agreeing to these terms, I declare:
   %br
   (1) Being able to present my session at Agile Brazil 2010 at the date and place defined by the event organization,
@@ -23,4 +23,4 @@
   (4) Being responsible civil and intellectually for all the content in my presentation, being able to respond
   legally to any illegal act I may do during its presentation at the conference.
 
-= render 'withdraw_sessions/form'
+= render 'sessions_state/form'

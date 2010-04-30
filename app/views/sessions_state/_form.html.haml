@@ -5,7 +5,8 @@
   - form.inputs :class => 'inputs accept' do
     = form.input :author_agreement, :as => :boolean, :input_html => {:tabindex => autotab}
     = form.input :image_agreement, :as => :boolean, :input_html => {:tabindex => autotab}
+    = form.input :state_event, :as => :hidden
   - form.buttons do
     = form.commit_button :confirm_session, :button_html => {:tabindex => autotab}
     = t('generic.or')
-    = link_to t('formtastic.actions.withdraw_session'), session_withdraw_path(@session)
+    = link_to t('formtastic.actions.withdraw_session'), session_confirm_path(@session)+"?session[state_event]=reject", :method => :put, :confirm => t('generic.are_you_sure', :action => t('formtastic.actions.withdraw_session').downcase)

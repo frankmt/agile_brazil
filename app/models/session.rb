@@ -114,11 +114,6 @@ class Session < ActiveRecord::Base
     state :accepted do
       validates_acceptance_of :author_agreement, :accept => true
     end
-
-    state :rejected do
-      validates_acceptance_of :author_agreement, :accept => true
-    end
-    
   end
   
   def second_author_username

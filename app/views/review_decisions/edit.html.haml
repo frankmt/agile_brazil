@@ -3,4 +3,5 @@
 .auto_focus
   
 - semantic_form_for([@review_decision.session, @review_decision]) do |form|
+  = error_messages_for :review_decision
   = render 'form', :form => form
